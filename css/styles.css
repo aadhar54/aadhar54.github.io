@@ -11478,3 +11478,20 @@ html {
 #projex {
   height: 200px;
 }
+
+@media only screen and (max-width: 600px) {
+  .margin-a {
+    margin: 20px 0;
+    padding-left: 0;
+    padding-right: 0;
+    border: 2px solid #53bc9d;
+  }
+  .exp {
+    border: 2px solid #53bc9d;
+    margin: 20px 0;
+  }
+
+  .card-skills {
+    border: 2px solid #53bc9d;
+  }
+}
