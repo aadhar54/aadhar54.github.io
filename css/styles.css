@@ -4160,6 +4160,85 @@ fieldset:disabled .btn {
   cursor: default;
 }
 
+/* EXPERIENCE SECTION - three cards per row on desktop */
+#experience .row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Support Bootstrap column wrappers inside the experience row */
+#experience .row > * {
+  width: 100%;
+  max-width: none;
+  flex: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item img {
+  display: block;
+  max-width: 100px;
+  height: auto;
+  margin: 0 0 15px;
+  border-radius: 50%;
+}
+
+.experience-item .details {
+  width: 100%;
+  flex: 1;
+  text-align: center;
+}
+
+.experience-item .details h4 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.experience-item .details p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Tablet: two cards per row */
+@media (max-width: 991.98px) {
+  #experience .row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile: one card per row */
+@media (max-width: 575.98px) {
+  #experience .row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .nav-tabs {
   border-bottom: 0.125rem solid #dee2e6;
 }
@@ -11493,4 +11572,11 @@ html {
   .card-skills {
     border: 2px solid #53bc9d;
   }
+}
+
+
+.amex{
+    max-width: 70%; /* Prevents the image from being wider than its container */
+    height: auto;
+    margin-left: 80px;    /* Maintains the original aspect ratio */
 }
